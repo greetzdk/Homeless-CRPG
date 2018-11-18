@@ -1,0 +1,17 @@
+
+$pcName
+Gender: $pcGender
+
+Childhood: $originStoryChildhood
+Teen: $originStoryTeen
+Adult: $originStoryHomeless
+
+Health: $currentHealthPool out of $maxHealthPool
+Willpower: $currentWillPool out of $maxWillPool
+Worth: $currentWorthPool
+
+Body Bonus: $pcBodyBonus
+Ment Bonus: $pcMentBonus
+Agil Bonus: $pcAgilBonus
+Conf Bonus: $pcConfBonus
+Imag Bonus: $pcImagBonus

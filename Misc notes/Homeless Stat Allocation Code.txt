@@ -1,0 +1,46 @@
+Copy paste code-ument.
+
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcFlexability gt 0 >>
+			<<set $pcFlexability-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillFlexability">>
+					<<print $pcFlexability>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillFlexability"><<print $pcFlexability>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcFlexability++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillFlexability">>
+				<<print $pcFlexability>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+#skillDefence
+#skillDefence
+#skillDefence
+#skillPerception
+#skillSceptisism
+#skillIntelligence
+#skillBluffing
+#skillCharming
+#skillDemeaning
+#skillSelf-Image
+#skillAppeal
+#skillPeople-Skill
+#skillSneaking
+#skillHiding
+#skillFlexability

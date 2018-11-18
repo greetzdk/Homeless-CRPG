@@ -1,0 +1,27 @@
+This document explains how locations function.
+
+Hubs contain links to SUBHUB locations. SUBHUBS are wrapped in a span class, which is replaced with CONTENT from LINK when the player chooses an option (Moving to a different room or taking an action).
+Rooms aren't actually a conventional room, but instead contains a DESCRIPTION and a set of ACTIONS. 
+ACTIONS then leads to more ACTIONS or goes back to a ROOM (Clicking GO BACK leads back to the Sub Hub, as it is the last passage the player *actually* entered. 
+
+   main hub widget
+      sub hub widget
+        span Id #subHub
+         defaultRoom
+            action
+         subRoom
+            action
+         subRoom
+            action
+   
+Naming Convention example.
+
+   hubDOWNTOWN
+      subPUB
+         defaultPubEnter
+            roomPubBar
+               Get a drink
+            roomPubSeating
+              Eat food or something.
+            roomPubFlirt
+               Random encounters, maybe?

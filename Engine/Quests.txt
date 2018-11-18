@@ -1,0 +1,10 @@
+<<nobr>>
+<<widget "questLog">>
+	
+	<div class="quest">
+		Earn Money: $pcCash
+	</div>
+	
+	
+<</widget>>
+<</nobr>>

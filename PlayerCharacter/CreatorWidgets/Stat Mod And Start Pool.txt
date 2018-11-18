@@ -1,0 +1,153 @@
+<<nobr>>
+<<widget "bonusStatModifiers">>
+	<<if $pcBody gte 24>>
+	   <<set $pcBodyBonus += 7>>
+	       <<elseif $pcBody gte 22>>
+	         <<set $pcBodyBonus += 6>>
+	       <<elseif $pcBody gte 20>>
+	         <<set $pcBodyBonus += 5>>
+	       <<elseif $pcBody gte 18>>
+	         <<set $pcBodyBonus += 4>>
+	       <<elseif $pcBody gte 16>>
+	         <<set $pcBodyBonus += 3>>
+	       <<elseif $pcBody gte 14>>
+	         <<set $pcBodyBonus += 2>>
+	       <<elseif $pcBody gte 12>>
+	         <<set $pcBodyBonus += 1>>
+	       <<elseif $pcBody gte 10>>
+	         <<set $pcBodyBonus += 0>>
+	       <<elseif $pcBody gte 8>>
+	         <<set $pcBodyBonus -= 1>>
+	       <<elseif $pcBody gte 6>>
+	         <<set $pcBodyBonus -= 2>>
+	       <<elseif $pcBody gte 4>>
+	         <<set $pcBodyBonus -= 3>>
+	       <<elseif $pcBody gte 2>>
+	         <<set $pcBodyBonus -= 4>>
+	       <<elseif $pcBody gte 1>>
+	         <<set $pcBodyBonus -= 5>>
+	<</if>>
+
+	<<if $pcMent gte 24>>
+	   <<set $pcMentBonus += 7>>
+	       <<elseif $pcMent gte 22>>
+	         <<set $pcMentBonus += 6>>
+	       <<elseif $pcMent gte 20>>
+	         <<set $pcMentBonus += 5>>
+	       <<elseif $pcMent gte 18>>
+	         <<set $pcMentBonus += 4>>
+	       <<elseif $pcMent gte 16>>
+	         <<set $pcMentBonus += 3>>
+	       <<elseif $pcMent gte 14>>
+	         <<set $pcMentBonus += 2>>
+	       <<elseif $pcMent gte 12>>
+	         <<set $pcMentBonus += 1>>
+	       <<elseif $pcMent gte 10>>
+	         <<set $pcMentBonus += 0>>
+	       <<elseif $pcMent gte 8>>
+	         <<set $pcMentBonus -= 1>>
+	       <<elseif $pcMent gte 6>>
+	         <<set $pcMentBonus -= 2>>
+	       <<elseif $pcMent gte 4>>
+	         <<set $pcMentBonus -= 3>>
+	       <<elseif $pcMent gte 2>>
+	         <<set $pcMentBonus -= 4>>
+	       <<elseif $pcMent gte 1>>
+	         <<set $pcMentBonus -= 5>>
+	<</if>>
+
+<<if $pcAgil gte 24>>
+	   <<set $pcAgilBonus += 7>>
+	       <<elseif $pcAgil gte 22>>
+	         <<set $pcAgilBonus += 6>>
+	       <<elseif $pcAgil gte 20>>
+	         <<set $pcAgilBonus += 5>>
+	       <<elseif $pcAgil gte 18>>
+	         <<set $pcAgilBonus += 4>>
+	       <<elseif $pcAgil gte 16>>
+	         <<set $pcAgilBonus += 3>>
+	       <<elseif $pcAgil gte 14>>
+	         <<set $pcAgilBonus += 2>>
+	       <<elseif $pcAgil gte 12>>
+	         <<set $pcAgilBonus += 1>>
+	       <<elseif $pcAgil gte 10>>
+	         <<set $pcAgilBonus += 0>>
+	       <<elseif $pcAgil gte 8>>
+	         <<set $pcAgilBonus -= 1>>
+	       <<elseif $pcAgil gte 6>>
+	         <<set $pcAgilBonus -= 2>>
+	       <<elseif $pcAgil gte 4>>
+	         <<set $pcAgilBonus -= 3>>
+	       <<elseif $pcAgil gte 2>>
+	         <<set $pcAgilBonus -= 4>>
+	       <<elseif $pcAgil gte 1>>
+	         <<set $pcAgilBonus -= 5>>
+	<</if>>
+	
+<<if $pcConf gte 24>>
+	   <<set $pcConfBonus += 7>>
+	       <<elseif $pcConf gte 22>>
+	         <<set $pcConfBonus += 6>>
+	       <<elseif $pcConf gte 20>>
+	         <<set $pcConfBonus += 5>>
+	       <<elseif $pcConf gte 18>>
+	         <<set $pcConfBonus += 4>>
+	       <<elseif $pcConf gte 16>>
+	         <<set $pcConfBonus += 3>>
+	       <<elseif $pcConf gte 14>>
+	         <<set $pcConfBonus += 2>>
+	       <<elseif $pcConf gte 12>>
+	         <<set $pcConfBonus += 1>>
+	       <<elseif $pcConf gte 10>>
+	         <<set $pcConfBonus += 0>>
+	       <<elseif $pcConf gte 8>>
+	         <<set $pcConfBonus -= 1>>
+	       <<elseif $pcConf gte 6>>
+	         <<set $pcConfBonus -= 2>>
+	       <<elseif $pcConf gte 4>>
+	         <<set $pcConfBonus -= 3>>
+	       <<elseif $pcConf gte 2>>
+	         <<set $pcConfBonus -= 4>>
+	       <<elseif $pcConf gte 1>>
+	         <<set $pcConfBonus -= 5>>
+	<</if>>
+<<if $pcImag gte 24>>
+	   <<set $pcImagBonus += 7>>
+	       <<elseif $pcImag gte 22>>
+	         <<set $pcImagBonus += 6>>
+	       <<elseif $pcImag gte 20>>
+	         <<set $pcImagBonus += 5>>
+	       <<elseif $pcImag gte 18>>
+	         <<set $pcImagBonus += 4>>
+	       <<elseif $pcImag gte 16>>
+	         <<set $pcImagBonus += 3>>
+	       <<elseif $pcImag gte 14>>
+	         <<set $pcImagBonus += 2>>
+	       <<elseif $pcImag gte 12>>
+	         <<set $pcImagBonus += 1>>
+	       <<elseif $pcImag gte 10>>
+	         <<set $pcImagBonus += 0>>
+	       <<elseif $pcImag gte 8>>
+	         <<set $pcImagBonus -= 1>>
+	       <<elseif $pcImag gte 6>>
+	         <<set $pcImagBonus -= 2>>
+	       <<elseif $pcImag gte 4>>
+	         <<set $pcImagBonus -= 3>>
+	       <<elseif $pcImag gte 2>>
+	         <<set $pcImagBonus -= 4>>
+	       <<elseif $pcImag gte 1>>
+	         <<set $pcImagBonus -= 5>>
+	<</if>>
+	
+   <<set $maxHealthPool = ($pcBodyBonus + $pcAgilBonus) * 3>>
+   <<if $maxHealthPool lte 0>><<set $maxHealthPool = 2>><</if>>
+   <<set $currentHealthPool = $maxHealthPool >>
+  
+   <<set $maxWillPool = ($pcMentBonus + $pcImagBonus) * 3>>
+   <<if $maxWillPool lte 0>><<set $maxWillPool = 2>><</if>>
+   <<set $currentWillPool = $maxWillPool >>
+   
+   <<set $currentWorthPool = ($pcConfBonus + 2) * 2>>
+
+<</widget>>
+<</nobr>>

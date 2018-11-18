@@ -1,0 +1,9 @@
+This is the mood/staus for each numbered variable. They do not scale, but need to be set to specific.
+
+$adamIntent is the number.
+$adamStatus is body language.
+$adamMood is what the player discerns.
+
+adamIntent becomes the number which must be loaded from the two arrays adamstatus/mood. It then displays the number variable as text.
+
+0 = Indifferent.

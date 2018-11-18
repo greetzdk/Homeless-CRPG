@@ -1,0 +1,13 @@
+Violent
+   Punk
+      Confront
+      Bill
+      Relationship
+   Nerd
+      Confront
+      Bill
+      Relationship
+   Run Away
+      Confront
+      Bill
+      Relationship

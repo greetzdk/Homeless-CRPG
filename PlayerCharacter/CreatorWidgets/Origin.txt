@@ -1,0 +1,130 @@
+<<nobr>>
+<<widget "genderDefiner">><span class="choicetext">
+<div class="choiceborder">
+	<<radiobutton "$pcGender" "Man">>  I was born a Man.
+</div>
+<div class="choiceborder">
+	<<radiobutton "$pcGender" "Woman" checked>>  I was born a Woman.
+</div>
+</span><</widget>> 
+
+<<widget "originSelectorChildhood">><span class="choicetext">
+
+	<div class="choicePhysique">
+<<radiobutton "$originStoryChildhood" "originAbuse" checked>> 
+<h1>A Touching Story</h1><br>
+I don't remember it. Whenever I think back there's these holes and gaps, like there's chinks of time missing. I think it was pretty okay.
+	</div>
+	
+	<div class="choiceCharisma">
+<<radiobutton "$originStoryChildhood" "originViolent">>
+<h1>They're Just Arguing</h1><br>
+I had a decent enough childhood. Except for the yelling. And the fighting. Okay, in between my dad beating me and my mom yelling all the time, I'd say I had a decent childhood.
+	</div>
+	
+	<div class="choiceMental">
+<<radiobutton "$originStoryChildhood" "originQuiet">> 
+<h1>12 Steps Away</h1><br>
+Most of my childhood was spent in nature. I liked being at home well enough when my dad was sober. Which was rarely.
+	</div>
+	
+</span><</widget>>
+
+<<widget "originSelectorTeen">><span class="choicebutton">
+
+	<div class="choicePhysique">	
+<<radiobutton "$originStoryTeen" "originPunk" checked>>
+<h1>The Punk</h1><br>
+Nevermind the bollocks, I turned punk. Skipping school and looking awesome in my leather jacket, as I'd chainsmoke behind the local grocery store.
+	</div>
+	
+	<div class="choiceCharisma">
+<<radiobutton "$originStoryTeen" "originRunAway">>
+<h1>Runaway Issue #1</h1><br>
+One evening I decided to run away from home. Eventually the police found me and brought me back home, but not before my parents manage to sell of most my stuff.
+	</div>
+	
+	<div class="choiceMental">
+<<radiobutton "$originStoryTeen" "originNerd">>
+<h1>Self Insert</h1><br>
+I crunched the numbers and realized it's all ones and zeroes. Who needs people when you can flee into videogames and masturbate to porn all day.
+	</div>
+	
+</span><</widget>>
+
+<<widget "originSelectorHomeless">><span class="choicebutton">
+
+	<div class="choicePhysique">
+<<radiobutton "$originStoryHomeless" "originConfront" checked>>
+<h1>A Series of Mistakes</h1><br>
+I have no idea why I'm still living at home, but this is it. Having had enough, I've chosen to confront my parents about their awful behaviour.
+	</div>
+	
+	<div class="choiceCharisma">
+<<radiobutton "$originStoryHomeless" "originBill">>
+<h1>Transgender Blues</h1><br>
+I'm living alone, attending university, and living my life. Part of that is undergoing medicinal therapy for when I get my transitioning surgery.
+	</div>
+	
+	<div class="choiceMental">
+<<radiobutton "$originStoryHomeless" "originRelationship">>
+<h1>Counting Steps on Stairs</h1><br>
+No more, I'm done with this abusive relationship. I thought they loved me, but I can't fool myself anymore. Unfortunatly.
+	</div>
+	
+</span><</widget>>
+
+/* Adds an subtracts stats based on Origin story. Is called later */
+
+<<widget "backgroundSetStats">>
+
+	/*Childhood*/
+<<if $originStoryChildhood is "originAbuse">>
+	<<set $pcBody += 4 >><<set $pcMent -= 2>>
+	<<set $pcFighting += 1>>
+	<<set $pcPerception += 1>>
+	
+<<elseif $originStoryChildhood is "originViolent">>
+	<<set $pcMent += 4 >><<set $pcConf -= 2>>
+	<<set $pcSceptisism += 1>>
+	<<set $pcDemeaning += 1>>
+			
+<<elseif $originStoryChildhood is "originQuiet">>
+	<<set $pcImag += 4 >><<set $pcBody -= 2>>
+	<<set $pcBluffing += 1>>
+	<<set $pcRunning += 1>>
+	
+<</if>>
+	
+	/*Teenager*/
+<<if $originStoryTeen is "originPunk">>
+	<<set $pcConf += 4 >><<set $pcBody -= 2>>
+	<<set $pcSelfImage += 1>>
+	<<set $pcDefence += 1>>
+		<<elseif $originStoryTeen is "originRunAway">>
+			<<set $pcAgi += 4 >><<set $pcConf -= 2>>
+			<<set $pcHiding += 1>>
+			<<set $pcDemeaning += 1>>
+		<<elseif $originStoryTeen is "originNerd">>
+			<<set $pcMent += 4 >><<set $pcAgi -= 2>>
+			<<set $pcIntelligence += 1>>
+			<<set $pcSneaking += 1>>
+<</if>>	
+	
+	/*Homeless*/
+<<if $originStoryHomeless is "originConfront">>
+	<<set $pcConf += 4 >><<set $pcImag -= 2>>
+	<<set $pcPeopleSkill += 1>>
+	<<set $pcSelfImage += 1>>
+		<<elseif $originStoryHomeless is "originBill">>
+			<<set $pcMent += 4 >><<set $pcConf -= 2>>
+			<<set $pcPerception += 1>>
+			<<set $pcAppeal += 1>>
+		<<elseif $originStoryHomeless is "originRelationship">>
+			<<set $pcImag += 4 >><<set $pcMent -= 2>>
+			<<set $pcCharming += 1>>
+			<<set $pcIntelligence += 1>>
+<</if>>
+<</widget>>
+
+<</nobr>>

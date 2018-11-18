@@ -1,0 +1,64 @@
+Origin Combinations
+
+<<if $originStoryChildhood eq "originAbuse">>
+   Hello
+   <<if $originStoryTeen eq "originPunk">>
+        how
+         <<if $originStoryHomeless eq "originConfront">>
+             are you
+             
+         <<elseif $originStoryHomeless eq "originBill">>
+              are you
+              
+         <<elseif $originStoryHomeless eq "originRelationship">>
+               are you
+         
+         <</if>>           
+   
+   <<elseif $originStoryTeen eq "originNerd">>
+         how
+         
+         <<if $originStoryHomeless eq "originConfront">>
+            are you
+         
+         <<elseif $originStoryHomeless eq "originBill">>
+            are you
+         
+         <<elseif $originStoryHomeless eq "originRelationship">>
+            are you
+            
+       <</if>>          
+       
+   <<elseif $originStoryTeen eq "originRunAway">>
+        how
+        
+         <<if $originStoryHomeless eq "originConfront">>
+            are you
+            
+         <<elseif $originStoryHomeless eq "originBill">>
+            are you
+            
+         <<elseif $originStoryHomeless eq "originRelationship">>
+            are you
+            
+         <</if>>
+    <</if>>
+<</if>>
+
+
+
+
+<<elseif $originStoryChildhood is "originViolent">>
+
+
+
+
+
+
+
+<<elseif $originStoryChildhood is "originQuiet">>
+
+
+
+
+<</if>>

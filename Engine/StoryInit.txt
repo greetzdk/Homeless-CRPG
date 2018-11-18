@@ -1,0 +1,90 @@
+Copy Paste thingies
+	/*<<set $ to "">>*/
+	/*  */
+
+/*Character Descriptors (Physical stuff)*/
+
+	<<set $pcgender to "">>
+	<<set $pcName to "">>
+	<<set $originStoryChildhood to "originAbuse">>
+	<<set $originStoryTeen to "originPunk">>
+	<<set $originStoryHomeless to "originConfront">>
+	
+/* Body Stats */
+
+	<<set $bodyType to "">>
+	<<set $skinColor to "">>
+	<<set $hair to "">>
+	<<set $eyeColor to "">>
+	<<set $breasts to "">>
+	
+/* Common Stats */
+
+/* Player Stats */
+
+	<<set $pcAvailablePoints = 4>>
+	<<set $pcBody = 10>>
+	<<set $pcImag = 10>>
+	<<set $pcMent = 10>>
+	<<set $pcConf = 10>>
+	<<set $pcAgil = 10>>
+	
+	/* Bonus Modifiers. Adds to Rolls and Descriptors */
+		<<set $pcBodyBonus = 0>>
+		<<set $pcImagBonus = 0>>
+		<<set $pcMentBonus = 0>>
+		<<set $pcConfBonus = 0>>
+		<<set $pcAgilBonus = 0>>
+	
+	<<set $pcAvailableSkillPoints = 8>>
+	<<set $pcFighting = 0>>
+	<<set $pcDefence = 0>>
+	<<set $pcRunning = 0>>
+	<<set $pcPerception = 0>>
+	<<set $pcSceptisism = 0>>
+	<<set $pcIntelligence = 0>>
+	<<set $pcBluffing = 0>>
+	<<set $pcCharming = 0>>
+	<<set $pcDemeaning = 0>>
+	<<set $pcSelfImage = 0>>
+	<<set $pcAppeal = 0>>
+	<<set $pcPeopleSkill = 0>>
+	<<set $pcSneaking = 0>>
+	<<set $pcHiding = 0>>
+	<<set $pcFlexability = 0>>
+	
+/* PC Pools */
+	
+	<<set $maxHealthPool = 0>>
+	<<set $currentHealthPool = 0>>
+	
+	<<set $maxWillPool = 0>>
+	<<set $currentWillPool = 0>>
+	
+	<<set $currentWorthPool = 0 >>
+
+/* Misc. Items */
+
+	<<set $pcCash to 2>>
+	
+/* Quest Items */
+
+/* Interface */
+
+	<<set $UION = 0>>
+	<<set $footerEventHide = 0>>
+	<<set $footerTutorialHide = 1>>
+   
+/* Engine */
+   <<set $dieRoll = 0>>
+   <<set $DC = 0>>
+ 
+
+ 
+/* NPC Adam */
+
+   <<set $adamRelationLevel = 0>>
+   <<set $adamIntent = 0>>
+   <<set $adamMet = 0>>
+   <<set $adamMood to ["",""]>>
+   <<set $adamStatus to ["",""]>>

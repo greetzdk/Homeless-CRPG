@@ -1,0 +1,473 @@
+/* See Stat Setup for Explanation */
+
+<<nobr>>
+<<widget "skillSetup">>
+
+<br>Skill Points to Spend:
+<span id="availableSkillPoints">
+	<<print $pcAvailableSkillPoints>>
+</span><br>
+
+<br> Body Related Skills: <br>
+Fighting: 
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcFighting gt 0 >>
+			<<set $pcFighting-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillFighting">>
+					<<print $pcFighting>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillFighting"><<print $pcFighting>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcFighting++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillFighting">>
+				<<print $pcFighting>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Defence: 
+
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcDefence gt 0 >>
+			<<set $pcDefence-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillDefence">>
+					<<print $pcDefence>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillDefence"><<print $pcDefence>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcDefence++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillDefence">>
+				<<print $pcDefence>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Running: 
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcRunning gt 0 >>
+			<<set $pcRunning-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillRunning">>
+					<<print $pcRunning>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillRunning"><<print $pcRunning>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcRunning++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillRunning">>
+				<<print $pcRunning>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+<br>Mental Related Skills<br>
+
+Perception:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcPerception gt 0 >>
+			<<set $pcPerception-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillPerception">>
+					<<print $pcPerception>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillPerception"><<print $pcPerception>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcPerception++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillPerception">>
+				<<print $pcPerception>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Sceptisism: 
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcSceptisism gt 0 >>
+			<<set $pcSceptisism-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillSceptisism">>
+					<<print $pcSceptisism>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillSceptisism"><<print $pcSceptisism>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcSceptisism++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillSceptisism">>
+				<<print $pcSceptisism>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Intelligence:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcIntelligence gt 0 >>
+			<<set $pcIntelligence-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillIntelligence">>
+					<<print $pcIntelligence>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillIntelligence"><<print $pcIntelligence>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcIntelligence++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillIntelligence">>
+				<<print $pcIntelligence>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+<br>Imagination Related Skills<br>
+
+Bluffing: 
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcBluffing gt 0 >>
+			<<set $pcBluffing-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillBluffing">>
+					<<print $pcBluffing>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillBluffing"><<print $pcBluffing>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcBluffing++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillBluffing">>
+				<<print $pcBluffing>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Charming:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcCharming gt 0 >>
+			<<set $pcCharming-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillCharming">>
+					<<print $pcCharming>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillCharming"><<print $pcCharming>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcCharming++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillCharming">>
+				<<print $pcCharming>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Demeaning:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcDemeaning gt 0 >>
+			<<set $pcDemeaning-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillDemeaning">>
+					<<print $pcDemeaning>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillDemeaning"><<print $pcDemeaning>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcDemeaning++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillDemeaning">>
+				<<print $pcDemeaning>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+<br>Confidence Related Skills<br>
+
+Self Image:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcSelfImage gt 0 >>
+			<<set $pcSelfImage-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillSelfImage">>
+					<<print $pcSelfImage>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillSelfImage"><<print $pcSelfImage>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcSelfImage++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillSelfImage">>
+				<<print $pcSelfImage>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Appeal:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcAppeal gt 0 >>
+			<<set $pcAppeal-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillAppeal">>
+					<<print $pcAppeal>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillAppeal"><<print $pcAppeal>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcAppeal++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillAppeal">>
+				<<print $pcAppeal>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+People Skill:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcPeopleSkill gt 0 >>
+			<<set $pcPeopleSkill-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillPeopleSkill">>
+					<<print $pcPeopleSkill>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillPeopleSkill"><<print $pcPeopleSkill>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcPeopleSkill++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillPeopleSkill">>
+				<<print $pcPeopleSkill>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+<br>Agility Related Skills<br>
+
+Sneaking: 
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcSneaking gt 0 >>
+			<<set $pcSneaking-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillSneaking">>
+					<<print $pcSneaking>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillSneaking"><<print $pcSneaking>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcSneaking++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillSneaking">>
+				<<print $pcSneaking>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Hiding:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcHiding gt 0 >>
+			<<set $pcHiding-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillHiding">>
+					<<print $pcHiding>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillHiding"><<print $pcHiding>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcHiding++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillHiding">>
+				<<print $pcHiding>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+Flexability:
+<<link "[-]">>
+	<<if $pcAvailableSkillPoints lt 10 and $pcFlexability gt 0 >>
+			<<set $pcFlexability-->>
+			<<set $pcAvailableSkillPoints++>>
+				<<replace "#skillFlexability">>
+					<<print $pcFlexability>>
+				<</replace>>
+				<<replace "#availableSkillPoints">>
+					<<print $pcAvailableSkillPoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="skillFlexability"><<print $pcFlexability>></span>
+<<link "[+]">>
+	<<if $pcAvailableSkillPoints gt 0>>
+		<<set $pcFlexability++>>
+		<<set $pcAvailableSkillPoints-->>
+		<<replace "#skillFlexability">>
+				<<print $pcFlexability>>
+			<</replace>>
+			<<replace "#availableSkillPoints">>
+				<<print $pcAvailableSkillPoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<br>
+
+
+<</widget>>
+<</nobr>>

@@ -1,0 +1,64 @@
+<<nobr>>
+   
+   <<widget "fightingCheck">>
+      <<set $dieRoll = $pcFighting + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "defenceCheck">>
+      <<set $dieRoll = $pcDefence + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "runningCheck">>
+      <<set $dieRoll = $pcRunning + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "perceptionCheck">>
+      <<set $dieRoll = $pcPerception + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "sceptisismCheck">>
+      <<set $dieRoll = $pcSceptisism + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "intelligenceCheck">>
+      <<set $dieRoll = $pcIntelligence + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "bluffingCheck">>
+      <<set $dieRoll = $pcBluffing + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "charmingCheck">>
+      <<set $dieRoll = $pcCharming + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "demeaningCheck">>
+      <<set $dieRoll = $pcDemeaning + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "selfImageCheck">>
+      <<set $dieRoll = $pcSelfImage + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "appealCheck">>
+      <<set $dieRoll = $pcAppeal + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "peopleSkillCheck">>
+      <<set $dieRoll = $pcPeopleSkill + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "sneakingCheck">>
+      <<set $dieRoll = $pcSneaking + random(1, 20)>>
+   <</widget>>
+
+   <<widget "hidingCheck">>
+      <<set $dieRoll = $pcHiding + random(1, 20)>>
+   <</widget>>
+   
+   <<widget "flexabilityCheck">>
+      <<set $dieRoll = $pcFlexability + random(1, 20)>>
+   <</widget>>
+
+
+<</nobr>>

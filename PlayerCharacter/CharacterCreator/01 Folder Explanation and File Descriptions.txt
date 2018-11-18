@@ -1,0 +1,16 @@
+This Folder Contains the files for generating the player character. 
+   <<[X]]>> refers to a widget. See CreatorWidget folder for their explanation.
+
+<------ FILES EXPLANATION ---------->
+Intro: Simply where the game begins. (Initial variables are kept in StoryInit as per SugarCube standard.)
+
+Character Setup:  Contains text, <<genderDefiner>> and three <<originSelector[X]>> - which is found in [CreatorWidget -> Origin.txt]. Only $pcName is in a standard textbox.
+
+Physical Setup: Contains text, <<statAllocation>>, <<skillSetup>>, and an IF statement which sends players with $originRelationship to a customizer for their abusive boyfriend/girlfriend, and all other players to the next section.
+
+Chargen End: Contains a <<set $intro to "done">>, <<originRetelling>>
+
+<------ VARIABLE EXPLANATION ------->
+$pcName              = Stores Player Character name.
+$originStoryHomeless = One of three backgrounds stories the players can choose. 
+$intro               = Enables player hud.

@@ -1,0 +1,50 @@
+Homeless Stat Modifiers & Pools
+
+Our Variables.
+ 		<<set $pcBodyBonus = 0>>
+		<<set $pcImagBonus = 0>>
+		<<set $pcMentBonus = 0>>
+		<<set $pcConfBonus = 0>>
+		<<set $pcAgilBonus = 0>>
+ 
+We want them to increase like D&D, so from the top, we set each to become a certain number, if their parent bonus is high enough - then descending adding the lower values.
+
+   <<if $pcImag gte 24>>
+      <<set $pcImagBonus += 7>>
+         <<elseif $pcImag gte 22>>
+            <<set $pcImagBonus += 6>>
+         <<elseif $pcImag gte 20>>
+            <<set $pcImagBonus += 5>>
+         <<elseif $pcImag gte 18>>
+            <<set $pcImagBonus += 4>>
+         <<elseif $pcImag gte 16>>
+            <<set $pcImagBonus += 3>>
+         <<elseif $pcImag gte 14>>
+            <<set $pcImagBonus += 2>>
+         <<elseif $pcImag gte 12>>
+            <<set $pcImagBonus += 1>>
+         <<elseif $pcImag gte 10>>
+            <<set $pcImagBonus += 0>>
+         <<elseif $pcImag gte 8>>
+            <<set $pcImagBonus -= 1>>
+         <<elseif $pcImag gte 6>>
+            <<set $pcImagBonus -= 2>>
+         <<elseif $pcImag gte 4>>
+            <<set $pcImagBonus -= 3>>
+         <<elseif $pcImag gte 2>>
+            <<set $pcImagBonus -= 4>>
+         <<elseif $pcImag gte 1>>
+            <<set $pcImagBonus -= 5>>
+   <</if>>
+
+Sets Max Pool Possible and Current Pool. Sets it to 2 if it's in minus. It's for Worth to be in minus - Implies that PC isn't fond of themselves and will have to work to get positive pool.
+
+   <<set $maxHealthPool = ($pcBodyBonus + $pcAgilBonus) * 3>>
+   <<if $maxHealthPool lte 0>><<set $maxHealthPool = 2>><</if>>
+   <<set $currentHealthPool = $maxHealthPool >>
+  
+   <<set $maxWillPool = ($pcMentBonus + $pcImagBonus) * 3>>
+   <<if $maxWillPool lte 0>><<set $maxWillPool = 2>><</if>>
+   <<set $currentWillPool = $maxWillhPool >>
+   
+   <<set $currentWorthPool = ($pcConfBonus + 2) * 2>>

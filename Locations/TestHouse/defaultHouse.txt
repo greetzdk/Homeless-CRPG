@@ -1,0 +1,20 @@
+<<nobr>>
+   
+   <span id="#subHub"> 
+      You're standing inside of a TEST HOUSE house. The TEST FAMILY family lives here. And no, those aren't changable variables, that's their actual last name. It's weird and nobody talks about it, so why should we begin?      
+   </span>
+   
+   
+   
+<</nobr>>
+
+TESTHOUSE
+hubTestingAlley
+   defaultTESTHOUSE
+      subTesthouseLivingRoom
+      subTesthouseKitchen
+      actionTesthouseStairs
+         Skillcheck
+            subTesthouseRoom01
+            subTesthouseRoom02
+            subTesthouseBathroom

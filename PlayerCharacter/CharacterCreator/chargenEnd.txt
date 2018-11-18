@@ -1,0 +1,11 @@
+<<bonusStatModifiers>>
+
+/*Remember to fix this part here. Shows the hud.*/
+	<<set $intro to "done">>
+
+<<originRetelling>>
+
+ Eventually this part will have the origin setups which leads into the intro.
+ 
+ <<if >>
+ 	<<elseif 

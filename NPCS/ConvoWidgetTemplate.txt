@@ -1,0 +1,46 @@
+<<nobr>>
+
+/* Template for Conversations with NPCS */
+
+<<widget " ">>
+
+
+<<link " ">>
+   <<replace "#npcInteraction">>
+      << >>
+   <</replace>>
+<</link>><br>
+   
+<</widget>>
+
+
+<</nobr>>
+
+/* HOW TO USE THIS TEMPLATE */
+
+Interacting with NPC
+
+   Text
+   
+   1. choice (replacing class with <<topic>> widget.
+   2. choice (replacing class with <<topic>> widget.
+
+Player makes choice and the entire PASSAGE is then replace with the new topic chain. 
+
+------------------------------------------------------------------------------------------------------
+
+NPC MENUS
+
+Npcs should have a designated area 
+
+------------------------------------------------------------------------------------------------------
+EVENT CHAINS
+
+An event chain should have it's own widget - which can be recalled upon trigger.
+Naming convention is NPCNAME/EVENTNAME/. So
+
+ eg. PLAYER sleeps in ALLEY 
+      Look for triggers.
+      Go to npcActWidget
+
+The idea currently is to have "Events" and "Conversations". 

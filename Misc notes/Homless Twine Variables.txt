@@ -1,0 +1,212 @@
+Homeless Variables & Rules
+
+Goal: Don't die and get your life together.
+
+CharacterDescriptors
+    pcName
+    pcGender
+    originStoryChildhood
+        originAbuse
+        originViolent
+        originQuiet
+    originStoryTeen
+        originPunk
+        originNerd
+        OriginRunaway
+    originStoryHomeless
+        originConfront
+        originBill
+        originRelationship
+    genetalia
+      dick
+      vagina
+      asshole	
+	breasts	
+	bodyType
+   eyeColor
+   hair
+   skinColor
+
+HealthPools
+   Worth       Conf + Certain Acts    Reflects how a player feels about themselves.
+   Willpower   Ment + Imag            Will to live and get shit done or overcome bad situations.
+   Health      Body + Agil            Health in battle, equals in fainting when out. No deaths.
+   
+CommonStats
+  Body - Strenght and Health.         Fighting, resisting force, lifting, condition.
+  Ment - Mental Effort and Willpower. Puzzles, resisting allure, resisting bluffs.
+  Imag - Imagination and Willpower.   Creativity, bluffing, charming.
+  Conf - Confidence and Worth.        Self-image, resisting slurs, resisting demeans.
+  Agil - Agillity and Health.         Sneaking, hiding, reach & flexibility. 
+  
+CommonSkills
+   Fighting
+   Defence
+   Running
+   
+   Perception
+   Sceptisism
+   Intelligence
+   
+   Bluffing
+   Charming
+   Demeaning
+   
+   Self-Image
+   Appeal
+   People-Skill
+   
+   Sneaking
+   Hiding
+   Flexability
+   
+User Interface
+   
+   $userInterfaceHeader = On and Off
+   
+Random notes and Stuff
+
+Something with Transgender. I don't know.
+  
+   I  /*Transgender Female to Male*/                                            I
+   I  <<if $pcGender is "Woman" and $originStoryHomeless is "originBill">>      I
+   I                                                                            I
+   I  You're a Female turning Male and then Japanese.                           I
+   I                                                                            I
+   I  <<elseif $originStoryHomeless isnot "originBill">>                        I
+   I                                                                            I
+   I  <</if>>                                                                   I
+   I                                                                            I
+   I  /*Transgender Male to Female*/                                            I
+   I  <<if $pcGender is "Man" and $originStoryHomeless is "originBill">>        I
+   I                                                                            I
+   I  You're a Male putting a strut in his walk.                                I
+   I                                                                            I
+   I  <<elseif $pcGender is "Man" and $originStoryHomeless isnot "originBill">> I
+   I                                                                            I
+   I  You're a man. A real mans man. A manny man man.                           I
+   I                                                                            I
+   I  <</if>>                                                                   I
+   
+Started Working on Skin Color... Why? It's really not necessary. "His sperm splatters erotically on your IVORY WHITE skin. And falls on your GARGANTUAN PALE boobs." Useless, really.
+-------------------------------------------------------------
+   I 	<<widget "bodyType">>                                  I
+   I	<div class="skinColorWhite">                           I
+   I			<<radiobutton "$skinColor" "White">>             I
+   I		</div>                                              I
+   I	<div class="skinColorBlack">                           I
+   I			<<radiobutton "$skinColor" "Black">>             I
+   I		</div>                                              I
+   I	<div class="skinColorAsian">                           I
+   I			<<radiobutton "$skinColor" "Asian">>             I
+   I		</div>                                              I
+   I  </widget>>                                             I
+   I                                                         I
+   I  /* Skin Color Div. Also, yes, It's pretty racist */    I
+   I                                                         I
+   I .skinColorWhite{                                        I
+   I    background: #FFC9A9;                                 I
+   I    border-style: groove;                                I
+   I    border-color: white;                                 I
+   I       border-radius: 15px;                              I
+   I    width: 50px;                                         I
+   I    height: 50px;                                        I
+   I    margin: 10px;                                        I
+   I    float: left;                                         I
+   I }                                                       I
+   I                                                         I
+   I .skinColorBlack{                                        I
+   I    background: #724125;                                 I
+   I    border-style: groove;                                I
+   I    border-color: white;                                 I
+   I       border-radius: 15px;                              I
+   I    width: 50px;                                         I
+   I    height: 50px;                                        I
+   I    margin: 10px;                                        I
+   I    float: left;                                         I
+   I }                                                       I
+   I                                                         I
+   I .skinColorAsian{                                        I
+   I    background: #FADB75;                                 I
+   I    border-style: groove;                                I
+   I    border-color: white;                                 I
+   I       border-radius: 15px;                              I
+   I    width: 50px;                                         I
+   I    height: 50px;                                        I
+   I    margin: 10px;                                        I
+   I    float: left;                                         I
+   I }                                                       I
+-------------------------------------------------------------
+
+Print Minus and plus.
+ 
+       I'm an Idiot and wanted a stat page that updated in real time... oh, wow, haha. I'm an idiot. No wonder I havent seen a single game that doesn't refer back to it self to update numbers. But goddamn it! I want my game!
+       
+       Hide plus if available points are equal to zero.
+       Show plus if spendable points equal to one or greater than zero.
+    
+       Hide minus if available points equal to 6.
+       Show minus if available points are less than 6.
+    
+       You need to set plus and minus as prints with variables inside of them.
+    
+       I'm a fucking idiot. Set an if and elseif statement INSIDE the link.
+    
+    <<link "[-]">>
+ 	 <<if $pcAvailableSkillPoints lt 10 and $pcDefence gt 0 >>
+ 			<<set $pcDefence-->>
+ 			<<set $pcAvailableSkillPoints++>>
+ 				<<replace "#skillDefence">>
+ 					<<print $pcDefence>>
+ 				<</replace>>
+ 				<<replace "#availableSkillPoints">>
+ 					<<print $pcAvailableSkillPoints>>
+ 				<</replace>>
+ 			<<else>>
+ 		<</if>>
+    <</link>>
+ 	 <span id="skillDefence"><<print $pcDefence>></span>
+    <<link "[+]">>
+ 	 <<if $pcAvailableSkillPoints gt 0>>
+ 		<<set $pcDefence++>>
+ 		<<set $pcAvailableSkillPoints-->>
+ 		<<replace "#skillDefence">>
+ 				<<print $pcDefence>>
+ 			 <</replace>>
+ 			 <<replace "#availableSkillPoints">>
+ 				<<print $pcAvailableSkillPoints>>
+ 			 <</replace>>
+ 		 <<else>>
+ 	 <</if>>
+    <</link>>
+    <br>
+    
+    Super simple. If a player doesn't have points, it doesn't do anything. Idiot awar goes to me. And     then not to me for fixing it. It's a very complicate award system.
+
+Musing on Skill points
+
+      Five blocks of three, that's 15 skills
+ 
+ Shortcut
+   
+   $pcFighting
+   $pcDefence
+   $pcRunning
+
+   $pcPerception
+   $pcSceptisism
+   $pcIntelligence
+
+   $pcBluffing
+   $pcCharming
+   $pcDemeaning
+
+   $pcSelf-Image
+   $pcAppeal
+   $pcPeople-Skill
+
+   $pcSneaking
+   $pcHiding
+   $pcFlexability
+   
+   <<set $pc += 1>>

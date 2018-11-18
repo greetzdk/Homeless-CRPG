@@ -1,0 +1,7 @@
+This is the mysterious TESTING ALLEY!!! 
+
+There's a lion here.[[Teach that Lion some manners!->fightingTest][$DC = 12]]
+
+There's a blind lion here. [[Sneak past the lion->sneakingTest][$DC = 10]]
+
+<a data-passage="interactWithAdam">Adam is also here.</a>

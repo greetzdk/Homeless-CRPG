@@ -1,0 +1,57 @@
+<<nobr>>
+
+/* Greeting Adam Conversation Tree */
+
+<<widget "greetAdam">>
+"Hello there! I am an NPC. It ain't easy, but somebody has to do it. Standing around. Waiting. Pretending to have interesting things to talk about. All that stuff. Why does nobody ever accept that, sometimes, we npcs just want to have a simple conversation about... The weather! Yhea."<br><br>
+   
+"Uh, hi, Adam." <br><br>
+   
+He recoils at your words and glance at you through squinted eyes. "How did you know my name?"<br><br>
+   
+"...How did I know your name?" You simply don't know. Lacking an answer, Adam spends the next twenty minutes monolouging about how you're all part of a beta test. Not one for meta-jokes, you reply; <br><br>
+
+<<link "1. 'Stop ruining my immersion.'">>
+   <<replace "#npcInteraction">>
+      <<greetAdam01>>
+   <</replace>>
+<</link>><br>
+<<link "2. 'Duh, obviously.'">>
+   <<replace "#npcInteraction">>
+      <<greetAdam02>>
+   <</replace>>
+<</link>><br>
+   
+<</widget>>
+
+<<widget "greetAdam01">>
+
+"Adam," you interrupt, "I know. This whole bit here is stupid. Please, just... let me play and pretend that I'm a homeless person trying to survive." You look at him with puppy eyes, "Pretty, please, Adam."<br><br>
+
+Adam looks conflicted for a moment. "Aw, what the heck. Sure. I'll play pretend with you." <br><br>
+
+<<link "1. Give him a kiss on the cheeck.">>
+      <<set $adamRelationLevel += 1>>
+      <<set $adamMet = 1>>
+      <<goto [[interactWithAdam]]>>
+<</link>><br>
+   
+<</widget>>
+
+<<widget "greetAdam02">>
+
+"I am literally a snowflake of a human being, dramatic backstory and all, of course we're goddamn placeholders in a video game. Come on, bro." By the end you're almost screaming at the poor man.<br><br>
+
+"I- I- I," lips quivering, Adam attempts to speak, but starts weeping instead. Well done, you made a grown as man with mental problems cry. I hope you're proud.<br><br>
+
+<<link "1. Shashey-away.">>
+      <<set $adamRelationLevel -= 1>>
+      <<set $adamMet = 1>>
+      <<goto [[interactWithAdam]]>>
+<</link>><br>
+   
+<</widget>>
+
+/* End of Greeting Adam Conversation Tree */
+
+<</nobr>>

@@ -1,0 +1,19 @@
+Gameplay
+
+Homeless works in rounds: Morning, Noon, Evening, Night, and Sleep.
+
+Any action taken consumes time and when you go to sleep, you don't get a chance to go somewhere else, so make sure you're in a safe spot.
+
+There's no days in this game, and time doesn't truly progress. So if you have a date or an objective, there's really no way to run out of time to compelete it. Instead, when you go to the event, it just magically becomes that day. 
+
+NPCs
+
+Characters can be encountered at certain places, and events trigger depending on circumstances. You'll generally know where to go, if you have a certain event available to you. 
+
+This is where I'll write a tutorial.
+
+Gist of it.
+
+Specific menus.
+
+[[Nah, take me to the good stuff.->characterSetup]]

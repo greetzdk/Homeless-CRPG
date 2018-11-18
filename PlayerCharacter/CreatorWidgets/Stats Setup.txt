@@ -1,0 +1,155 @@
+<<widget "statAllocation">><<nobr>>
+Attribute Points to Spend: <span id="availablePoints"><<print $pcAvailablePoints>></span><br>
+
+Body:
+/* Subtracts a statpoint - but ceases function when pcAP eq six
+		Prints Current Number
+	Adds a Point if pcAP is greater than 6*/
+<<link "[-]">>
+	<<if $pcBody gt 0>>
+			<<set $pcBody-->>
+			<<set $pcAvailablePoints++>>
+				<<replace "#statBody">>
+					<<print $pcBody>>
+				<</replace>>
+				<<replace "#availablePoints">>
+					<<print $pcAvailablePoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="statBody"><<print $pcBody>></span>
+<<link "[+]">>
+	<<if $pcAvailablePoints gt 0>>
+		<<set $pcBody++>>
+		<<set $pcAvailablePoints-->>
+		<<replace "#statBody">>
+				<<print $pcBody>>
+			<</replace>>
+			<<replace "#availablePoints">>
+				<<print $pcAvailablePoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+
+<br>
+Agility
+<<link "[-]">>
+	<<if $pcAgil gt 0>>
+			<<set $pcAgil-->>
+			<<set $pcAvailablePoints++>>
+				<<replace "#statAgil">>
+					<<print $pcAgil>>
+				<</replace>>
+				<<replace "#availablePoints">>
+					<<print $pcAvailablePoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="statAgil"><<print $pcAgil>></span>
+<<link "[+]">>
+	<<if $pcAvailablePoints gt 0>>
+		<<set $pcAgil++>>
+		<<set $pcAvailablePoints-->>
+		<<replace "#statAgil">>
+				<<print $pcAgil>>
+			<</replace>>
+			<<replace "#availablePoints">>
+				<<print $pcAvailablePoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+
+<br>
+Mental:
+<<link "[-]">>
+	<<if $pcMent gt 0>>
+			<<set $pcMent-->>
+			<<set $pcAvailablePoints++>>
+				<<replace "#statMent">>
+					<<print $pcMent>>
+				<</replace>>
+				<<replace "#availablePoints">>
+					<<print $pcAvailablePoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="statMent"><<print $pcMent>></span>
+<<link "[+]">>
+	<<if $pcAvailablePoints gt 0>>
+		<<set $pcMent++>>
+		<<set $pcAvailablePoints-->>
+		<<replace "#statMent">>
+				<<print $pcMent>>
+			<</replace>>
+			<<replace "#availablePoints">>
+				<<print $pcAvailablePoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+
+<br>
+Imagination:
+<<link "[-]">>
+	<<if $pcImag gt 0>>
+			<<set $pcImag-->>
+			<<set $pcAvailablePoints++>>
+				<<replace "#statImag">>
+					<<print $pcImag>>
+				<</replace>>
+				<<replace "#availablePoints">>
+					<<print $pcAvailablePoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="statImag"><<print $pcImag>></span>
+<<link "[+]">>
+	<<if $pcAvailablePoints gt 0>>
+		<<set $pcImag++>>
+		<<set $pcAvailablePoints-->>
+		<<replace "#statImag">>
+				<<print $pcImag>>
+			<</replace>>
+			<<replace "#availablePoints">>
+				<<print $pcAvailablePoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+
+<br>
+Confidence:
+<<link "[-]">>
+	<<if $pcConf gt 0>>
+			<<set $pcConf-->>
+			<<set $pcAvailablePoints++>>
+				<<replace "#statConf">>
+					<<print $pcConf>>
+				<</replace>>
+				<<replace "#availablePoints">>
+					<<print $pcAvailablePoints>>
+				<</replace>>
+			<<else>>
+		<</if>>
+<</link>>
+	<span id="statConf"><<print $pcConf>></span>
+<<link "[+]">>
+	<<if $pcAvailablePoints gt 0>>
+		<<set $pcConf++>>
+		<<set $pcAvailablePoints-->>
+		<<replace "#statConf">>
+				<<print $pcConf>>
+			<</replace>>
+			<<replace "#availablePoints">>
+				<<print $pcAvailablePoints>>
+			<</replace>>
+		<<else>>
+	<</if>>
+<</link>>
+<</nobr>><</widget>>

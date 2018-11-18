@@ -1,0 +1,32 @@
+<<nobr>>
+
+<span id="adamStatus"></span>
+
+<span id="npcInteraction">
+<<if $adamMet == 0>>
+Adam is a guy in his late twenties. On his head sits a worn beanie that might have been gray at some point. He's wearing a large blue winter coat, which he propably stole off another poor soul living on the streets.<br><br>
+
+As he shuffles through dumpsters, you can occasionally hear him mumble conspiracies. Most often it's stuff like, "I am not a self-insert," or, "He gave me the wrong name. It's supposed to be something else starting with a.<br><br>
+
+   
+   <<link "Aquint Yourself">>
+   <<replace "#npcInteraction">>
+      <<greetAdam>>
+   <</replace>>
+ <</link>>
+<</if>>
+ 
+   <<if $adamMet == 1>>
+Adam lingers in this alley. How you knew hi name is still a mystery. 
+   <</if>>
+   
+   <<if $adamRelationLevel >= 1>>
+But, hey. You made a new friend. So that's nice!
+   <</if>>
+   
+   <<if $adamRelationLevel <= -1>>
+One that will haunt him for the rest of his life. Do you feel good about that one?   
+   <</if>>  
+</span>
+
+<</nobr>>

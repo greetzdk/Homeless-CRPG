@@ -1,0 +1,17 @@
+Name: <<textbox "$pcName" "Steven Seagull">>
+
+What gender were you born as?
+<<genderDefiner>>
+
+Choose your background story. Before finalizing you'll get a chance to redo everything, if your origin isn't to your liking.
+
+<h1>What was your childhood like?</h1>
+<<originSelectorChildhood>>
+<h1>What kind of Teenager were you?</h1>
+<<originSelectorTeen>>
+<h1>How did you become homeless?</h1>
+<<originSelectorHomeless>>
+
+	
+[[To Skill Allocation->physicalSetup]]
+[[Tutorial on Skills->SkillTutorial]]

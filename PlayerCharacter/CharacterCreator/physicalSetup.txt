@@ -1,0 +1,20 @@
+<<backgroundSetStats>>
+
+<<nobr>>
+
+Your background story allocated some points for you, but feel free to redistribute them to your liking. 
+
+<br><br>
+
+<<statAllocation>>
+
+<br>
+
+<<skillSetup>>
+
+<</nobr>>
+
+<<if $originStoryHomeless isnot "originRelationship">>
+[[Finalize Character->chargenEnd]]
+	<<else>>[[We need to talk about your partner...->partnerSetup]]
+<</if>>
